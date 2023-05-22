@@ -1,13 +1,45 @@
 <h1>Our Links! :)<h1>
   
-  <label for="dog-names">Choose what link!:</label> 
-    <select name="dog-names" id="Selection"> 
-        <option value="Michigan.Gov">Rigatoni</option> 
-        <option value="dave">Nps.Gov</option> 
-        <option value="pumpernickel">Pumpernickel</option> 
-        <option value="reeses">Reeses</option> 
-    </select>
-<body style="background-color:powderblue;">
-<p id="men"></p>
-  
- 
+  <html>
+<head>
+
+<script>
+/*  TEMPLATE CONTROL */
+
+$(function changeSelect() {
+if (document.getElementById("dropBox").value = "1") {
+    document.getElementById("divText").innerhtml = "...";
+} else if (document.getElementById("dropBox").value = "2") {
+    document.getElementById("divText").innerhtml = "[HEADER] [DATE] [COUNT] ...";
+} else if (document.getElementById("dropBox").value = "3") {
+    document.getElementById("divText").innerhtml = "[HEADER] ...";
+} else if (document.getElementById("dropBox").value = "4") {
+    document.getElementById("divText").innerhtml = "NOTE [DATE] ...";
+}
+});
+
+
+</script>
+
+</head>
+
+<body>
+
+<!--TEMPLATE-->
+<form action="">
+<select type="text" id="dropBox" onchange="changeSelect()"> 
+<option value="1">No Template</option>
+<option value="2">Template 1</option>
+<option value="3">Template 2</option>
+<option value="4">Template 3</option>
+</select>
+
+<div id="divText">THIS TEXT SHOULD CHANGE</div>
+<!--GENERATE BUTTON DOES NOTHING RIGHT NOW-->
+<button onclick="">Generate</button>
+</form>
+<br>
+<br>
+
+</body>
+</html>
